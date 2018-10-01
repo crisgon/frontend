@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Quickcep</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,6 +12,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link href="https://fonts.googleapis.com/css?family=Krub:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -22,7 +23,61 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+
+  <header>
+    <h1 class="title">QUICKCEP</h1>
+    <h2>Proxy simples e rápido para consulta de CEP</h2>
+    <div id="endpoint">
+      <span class="endpoint">GET<input type="text" class="endpoint" value="http://fastcep.appspot.com/v1/<seu-cep-aqui>" readonly></span>
+    </div>
+  </header>
+  <div class="main">
+    <section id="section-left">
+      <h2>SOBRE</h2>
+      <p>
+        <strong>Quickcep</strong> unifica consultas de CEP de diversos serviços em apenas 1 local, o que te permite economizar tempo para realizar suas consultas, utilizando
+        concorrência diponibilizada em <a href="https://golang.org/ ">Golang</a> para realizar diversas requisições simultaneas em diversos serviços de CEP sendo capaz de selecionar apenas
+        a resposta mais rapida dentro os serviços utilizados.
+      </p>
+      <p>
+        Existem diversos serviços de consulta de CEP espalhados e cada um possui um corpo de resposta diferente, <strong>Quickcep</strong> consegue consultar estes serviços
+        e retornar uma resposta uniforme independente de qual foi a fonte de consulta, assim você não precisa se preocupar com qual foi o serviço que
+        respondeu e sim com os dados em si, além de ter outros serviços de “backup” caso algum deles falhe, isso significa que você sempre terá uma
+        resposta válida o que torna suas consultas “a prova de falhas”.
+      </p>
+    </section>
+    <section id="section-right">
+      <h2>DEMOSTRAÇÃO</h2>
+      <form method="POST">
+        <input type="text" class="cep" placeholder="Digite seu CEP...">
+        <button type="submit">BUSCAR</button>
+      </form>
+      <div id="response">
+      </div>
+    </section>
+  </div>
+  <div class="main">
+    <section id="section-left">
+      <h2>VANTAGENS</h2>
+      <ul id="advantages">
+        <li>Independência de serviços</li>
+        <li>Alta disponibilidade</li>
+        <li>Tolerância a falhas</li>
+        <li>Rapidez</li>
+      </ul>
+    </section>
+    <section id="section-right">
+      <h2>COLABORADORES</h2>
+      <div class="persons">
+        <a><img src="https://avatars1.githubusercontent.com/u/11068059?s=400&v=4"></a>
+        <a><img src="https://avatars2.githubusercontent.com/u/31291372?s=400&u=77976a988541d265af9f9a40e63f6007dda9f44c&v=4"></a>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>Quickcep - 2018</p>
+  </footer>
+
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
