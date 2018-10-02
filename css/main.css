@@ -101,6 +101,13 @@ textarea {
 * {
   box-sizing: border-box;
 }
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
 html, body {
   height: 100%;
 }
@@ -112,7 +119,7 @@ body {
   grid-template-rows: 400px auto auto 50px;
   color: #202020;
 }
-header, .persons, .main, #advantages  {
+header, .persons, .main, #advantages, footer  {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,14 +169,14 @@ input.cep {
 }
 button {
   margin: 0 0 0 10px;
-  padding: 0px 50px;
+  padding: 0px 2vw;
   height: 40px;
   border-radius: 12px;
   border-width: 0px;
   background-color: #ff4a4a;
   color: #fff;
   transition: all 0s ease;
-  font-weight: 700;
+  font-weight: 500;
 }
 button:active {
   border-width: 0px 0px 0px 0px;
@@ -187,10 +194,13 @@ button:active {
   align-items: center;
 }
 #section-right {
-  width: 50%;
   padding-left: 50px;
   justify-content: flex-start;
   align-items: center;
+  flex-basis: 50%;
+}
+#demo {
+  width: 100%;
 }
 #response {
   padding: 10px 10px;
@@ -199,8 +209,8 @@ button:active {
   border-radius: 12px;
   background-color: #f8f8f8;
   min-height: 240px;
-  width: 80%;
   text-align: left;
+  max-width: 100%;
 }
 section {
   display: flex;
@@ -213,7 +223,6 @@ section > h2 {
 }
 form {
   margin-top: 16px;
-  width: 80%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -222,6 +231,9 @@ footer {
   background-color: #1d1d1d;
   color: #fff;
   text-align: center;
+}
+footer p {
+  margin: 0;
 }
 .persons {
   flex-wrap: wrap;
@@ -241,6 +253,7 @@ footer {
   align-content: center;
   list-style: none;
   flex-wrap: wrap;
+  padding: 0;
 }
 #advantages li {
   background-color: #ff4a4a;
@@ -255,6 +268,54 @@ footer {
 [data-balloon], a {
   text-decoration: underline;
   color: #ff4a4a;
+}
+
+
+/* Responsive Design */
+@media (max-width: 950px) {
+  #section-left, #section-right {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+
+  }
+  .main {
+    margin: 25px 10vw 0px 10vw;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .main:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+  #response {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 580px) {
+  input.endpoint {
+    width: 60vw;
+  }
+}
+@media (max-width: 370px) {
+  button {
+    margin: 10px 0 10px 0;
+    font-size: 0.8rem;
+  }
+  form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 330px) {
+  input.endpoint {
+    width: 50vw;
+  }
+}
+@media (max-width: 220px) {
+  input.endpoint {
+    width: 30vw;
+  }
 }
 
 
