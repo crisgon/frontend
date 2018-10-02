@@ -1,12 +1,21 @@
+// One-click copy endpoint
+$('input.endpoint').click(function() {
+  this.select()
+  document.execCommand("copy");
+})
+
+// Contributors section effects
 $('#contributors figure').hover(function() {
   this.firstElementChild.classList.toggle('blur')
   this.lastElementChild.classList.toggle('visible')
 })
 
+// Section title effects
 $('#section-left, #section-right').hover(function() {
   this.firstElementChild.classList.toggle('hover')
 })
 
+// Demonstration/test section handler
 $('#form-cep').submit(function(e)  {
   e.preventDefault()
   const responseBox = $('#response code')
