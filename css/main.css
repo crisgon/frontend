@@ -222,7 +222,7 @@ section > h2 {
 section > h2.hover {
   border-bottom: solid 3px #202020;
 }
-form {
+#form-cep {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
@@ -336,7 +336,7 @@ footer p {
     margin: 10px 0 10px 0;
     font-size: 0.8rem;
   }
-  form {
+  #form-cep {
     flex-direction: column;
   }
 }
