@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Vinicius Meneses -- Dev -- @_vini23hot
 
 # THANKS
 
