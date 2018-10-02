@@ -108,6 +108,10 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
 html, body {
   height: 100%;
 }
@@ -132,8 +136,10 @@ header {
   background: #2b2b2b;
 }
 .title {
+  display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
+  animation: example 2s ease infinite;
 }
 #endpoint {
   margin-top: 30px;
@@ -176,9 +182,6 @@ button {
   background-color: #ff4a4a;
   color: #fff;
   font-weight: 500;
-}
-button:active {
-  border-width: 0px 0px 0px 0px;
 }
 .main {
   margin: 25px 10vw;
@@ -229,12 +232,20 @@ section > h2.hover {
   margin-bottom: 10px;
 }
 footer {
+  padding: 0 15px;
   background-color: #1d1d1d;
   color: #fff;
   text-align: center;
+  justify-content: space-between;
 }
 footer p {
   margin: 0;
+}
+footer i {
+  font-size: 25px;
+}
+footer i:hover {
+  color: #ff4a4a;
 }
 #contributors {
   flex-wrap: wrap;
@@ -245,7 +256,7 @@ footer p {
   border-radius: 50%;
   margin: 0;
 }
-#contributors img, #contributors i, section > h2, button, #advantages li  {
+#contributors img, #contributors i, section > h2, button, #advantages li, footer i {
   transition: all 0.5s ease;
 }
 #contributors a {
@@ -295,10 +306,10 @@ footer p {
   margin: 5px;
   width: 240px;
 }
-#advantages li:hover {
+#advantages li:hover, button:hover {
   background-color: #2b2b2b;
 }
-[data-balloon], a {
+.main [data-balloon], .main a {
   text-decoration: underline;
   color: #ff4a4a;
 }

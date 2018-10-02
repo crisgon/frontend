@@ -1,4 +1,3 @@
-
 $('#contributors figure').hover(function() {
   this.firstElementChild.classList.toggle('blur')
   this.lastElementChild.classList.toggle('visible')
